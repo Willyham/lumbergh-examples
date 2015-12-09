@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "benchmark": "^1.0.0",
     "esprima": "^2.7.0",
     "haversine": "^1.0.0",
     "prompt": "^0.2.14",
