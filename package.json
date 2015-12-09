@@ -1,0 +1,18 @@
+{
+  "name": "lumbergh-examples",
+  "version": "0.0.1",
+  "description": "Code examples from Lumbergh tech talk",
+  "main": "rule-evaluator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esprima": "^2.7.0",
+    "haversine": "^1.0.0",
+    "prompt": "^0.2.14",
+    "ramda": "^0.18.0",
+    "traverse": "^0.6.6"
+  }
+}
