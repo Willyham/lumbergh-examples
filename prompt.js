@@ -5,6 +5,14 @@ var R = require('ramda');
 var AST = require('./lib/AST');
 var evaluateRule = require('./rule-evaluator');
 
+function convertToNumber(input) {
+  var num = Number(input);
+  if (num === NaN) {
+    return input;
+  }
+  return num;
+}
+
 prompt.start();
 prompt.get('rule', function(err, result){
   var rule = result.rule;
@@ -14,7 +22,8 @@ prompt.get('rule', function(err, result){
   console.log(identifiers);
 
   prompt.get(identifiers, function(error, values){
-    var evaluated = evaluateRule(rule, values);
+    var parsedValues = R.map(convertToNumber, values);
+    var evaluated = evaluateRule(rule, parsedValues);
     if(evaluated === undefined){
       console.log('Unable to evaluate rule :(');
       return;
